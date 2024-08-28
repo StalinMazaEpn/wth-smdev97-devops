@@ -2,6 +2,8 @@ name: Dependency Review
 
 on:
   pull_request:
+    branches:
+      - main
     paths:
       - '**/package-lock.json'
       - '**/packages.config'
