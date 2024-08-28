@@ -1,0 +1,20 @@
+name: Dependency Review
+
+on:
+  pull_request:
+    paths:
+      - '**/package-lock.json'
+      - '**/packages.config'
+      - '**/*.csproj'
+      - '**/*.fsproj'
+      - '**/*.vbproj'
+
+jobs:
+  dependency-review:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Dependency Review Action
+        uses: github/dependency-review-action@v2
