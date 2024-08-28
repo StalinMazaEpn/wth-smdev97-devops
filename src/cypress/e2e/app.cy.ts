@@ -9,7 +9,7 @@ describe('App', () => {
       cy.visit('http://localhost:3000/')
   
       // check the h1 tag to contain shelter
-      cy.get('h1').contains('Adoption shelter smdev')
+      cy.get('h1').contains('Adoption shelter CF SMDev')
     })
 
     it('should display todays day', () => {
